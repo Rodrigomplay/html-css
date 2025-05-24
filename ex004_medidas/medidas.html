@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medidas relativas e absolutas</title>
+   <style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-align: justify;
+        background-color: rgba(52, 90, 130, 0.8);
+        color: #343a40;
+        line-height: 1.6;
+        margin: 20px;
+    }
+    .container {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #dfc791b8;
+        border-radius: 8px;
+        box-shadow: 0 0 10px; 
+    }
+    
+    h1 {
+        border-bottom: 2px solid #dee2e6; /* Linha sutil abaixo do título principal */
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+    }
+    pre {
+        background-color: #f7e8dcc9; /* Cinza ainda mais claro para a caixa de código */
+        border: 1px solid #ced4da; /* Borda cinza clara e suave */
+        padding: 15px; /* Aumenta um pouco o espaçamento interno */
+        border-radius: 8px; /* Bordas mais arredondadas */
+        overflow: auto;
+        font-size: 0.9em;
+        line-height: 1.5; /* Ligeiramente diferente para a caixa de código */
+        margin-bottom: 15px; /* Adiciona um pouco de espaço abaixo da caixa de código */
+    }
+     code {
+     font-family: 'Consolas', 'Courier New', monospace; /* Fonte monoespaçada comum para código */
+     display: block;
+     white-space: pre;
+     color: #274c77; /* Uma cor para destacar o código */
+    }
+
+    ul {
+     list-style-type: disc; /* Estilo padrão para a lista */
+     padding-left: 20px;
+     margin-bottom: 10px;
+    }
+
+    dd {
+     color: #021527; /* Um tom de cinza mais claro para as observações */
+     font-size: 0.9em;
+     margin-left: 20px;
+     margin-bottom: 5px;
+    }
+
+   hr {
+     border: 0;
+     border-top: 1px solid #dee2e6; /* Linha horizontal sutil */
+     margin: 20px 0;
+    }
+
+    section {
+     margin-bottom: 25px; /* Mais espaço entre as seções */
+ }
+   </style>  
+</head>
+
+<body>
+    <div class="container">
+    <h1>Medidas relativas e absolutas</h1>
+    <p>As medidas são representadas de duas formas: (medidas relativas e absolutas)</p>
+    <h2>Medidas absolutas</h2>
+    <p>As medidas absolutas representam um valor fixo e não se alteram dependendo de outros fatores, como o tamanho da tela, a fonte do usuário ou o elemento pai.Elas correspondem a unidades de medida físicas ou ponto fixos.</p>
+    <h3>As unidades absolutas mais comum em CSS são:</h3>
+   <ul>
+    <li>px (pixels): Um pixel é a menor unidade de medida na tela de um dispositivo. É uma unidade fixa e previsivel</li>
+    <dd>Obs:Embora seja absoluta, a percepção do tamanho em pixels pode variar ligeiramente entre telas com diferentes densidades de pixels (DPI ou PPI)</dd>
+    <li>cm (centímetros): Uma unidade de medida física.1cm corresponde a um centímetro real.</li>
+    <dd>Obs: O uso de cm, mm, in, pt e pc é menos comum para exibição na tela,pois o tamanho real pode variar dependendo do dispositivo de saída (monitor, impressora, etc).Elas são mais utilizadas em estilos para impressão.</dd>
+    <li>mm (milímetros): Similar a cm,mas em milímetros.10mm equivale a 1 cm.</li>
+    <li>in (polegadas):Outra unidade de medida física. 1 in equivale a 2.54cm.</li>
+    <li>pt (pontos):Uma unidade tradicionalmente usada em tipografia.1 pt equivale a 1/72 de uma polegada</li>
+    <li>pc (picas). Outra unidade tipografica. 1pc equivale a 12 pt.</li>
+   </ul>
+   <h3>Quando usar medidas absolutas:</h3>
+   <ul>
+    <li>Quando você precisa de um tamanho fixo e que não se altere, independentemente do contexto.</li>
+    <li>Em estilos para impressão, onde as dimensões físicas são importantes.</li>
+    <li>Para bordas(geralmente px) onde uma expessura consistente é desejada.</li>
+   </ul>
+   <h3>Desvantagens das medidas absolutas para web:</h3>
+   <ul>
+    <li>Pouca flexibilidade:Elementos com tamanhos absolutos podem não se adaptar bem a diferentes tamanhos de tela ou resoluções, podendo causar barras de rolagem indesejadas em dispositivos menores.</li>
+    <li>Problemas de acessibilidade: Usuários que aumentam o tamanho da fonte padrão do navegador podem ter dificuldades em visualizar o conteúdo se os tamanhos dos elementos estiverem fixos em pixels.</li>
+   </ul>
+   </div>
+   <div class="container">
+   <h2>Medidas relativas</h2>
+   <p>As medidas relativas baseiam seus valores em relação a algum outro valor, como o tamanho da fonte do elemento raiz (&lthtml&gt),a largura da viewport (área visível do navegador) ou a altura da viewport. Isso torna os layouts mais flexiveis e adaptáveis a diferentes contextos.</p>
+   <h3>As unidades relativas mais comuns são:</h3>
+   <ul>
+    <li>em:(O nome "em"tem origem na tipografia tradicional, onde a largura da letra "M"maiúscula era frequentemente usada como unidade de medida).  Relativo ao tamanho da fonte do elemento pai. Se o elemento pai tem uma font-size de 16 px, entçao 1 em no elemento filho também será 16px.Se o elemento filho tiver sua própria fonte-size definida, os valores em <strong>em</strong> dentro dele serão relativos a essa nova font-size.</li>
+    <section>
+        <pre><code>
+            body {
+               font-size: 16px; 
+            }
+            div {
+                font-size: 1.5; /* 1.5 * 16px = 24px */
+                padding: 1em; /* 1 * 24px = 24px */
+            }
+            p {
+                font-size: 0.8em; /* 0.8 * 16px = 12.8px */
+            }
+        </code></pre>
+    </section>
+    <dd>Obs: Valores em <strong>em</strong> podem se acumular. Se um elemento dentro de outro elemento também usar <strong>em</strong>, o tamanho será relativo ao <strong>em</strong> do elemento mais próximo.</dd>
+    <hr>
+    <li>rem (relativo ao tamanho da fonte do elemento raiz): "rem" significa "root em". Diferentemente de em, que é relativo ao pai mais próximo, rem é sempre relativo ao tamanho da fonte do elemento raiz do documento HTML (geralmente o elemento <html>). Isso torna o rem mais previsível para dimensionar elementos de forma consistente em todo o site, especialmente para tipografia.</li>
+    <section>
+        <pre><code>
+            html {
+                font-size:16px;
+            }
+             div {
+                font-size:1.5rem; /* 1.5 * 16px = 24px */
+                padding: 1rem; /* 1 * 16px */
+             }
+             p {
+                font-size: 0.8rem; /* 0.8 * 16px = 12.8px */
+             }
+        </code></pre>
+    </section>
+    <li>vw (relativo à largura da viewport): "vw" significa "viewport width". 1 vw é igual a 1% da largura da janela do navegador (a viewport). Por exemplo, se a largura da janela for 1200px, então 1 vw será 12px, e um elemento com width: 50vw terá 600px de largura.</li>
+    <li>vh (relativo à altura da viewport): "vh" significa "viewport height". Similar ao vw, 1 vh é igual a 1% da altura da janela do navegador (a viewport). Se a altura da janela for 800px, então 1 vh será 8px, e um elemento com height: 100vh ocupará toda a altura da tela.</li>
+    <li>% (porcentagem, relativo ao elemento pai): A unidade de porcentagem é relativa a uma propriedade do elemento pai. Para propriedades como width, height, margin, e padding, a porcentagem é geralmente relativa à dimensão correspondente do elemento pai. Por exemplo, se um elemento filho tem width: 50% e seu pai tem uma largura de 400px, o filho terá uma largura de 200px. Para a propriedade font-size, a porcentagem é relativa ao tamanho da fonte do elemento pai, funcionando de forma semelhante ao em.</li>
+   </ul>
+   </div>
+</body>
+</html>

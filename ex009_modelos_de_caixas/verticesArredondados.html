@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>border-radius</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            text-align: justify;
+            background-color: rgb(11, 11, 29);
+        }
+        header {
+            background-color: rgba(0, 0, 255, 0.638);
+            margin: 20px;
+            border-radius: 5px;
+            box-shadow: 2px 2px rgba(0, 0, 0, 0.452);
+        }
+        h1 {
+            text-align: center;
+            font-size: 2em;
+            
+        }
+        section {
+            background-color: rgba(223, 221, 221, 0.881);
+            margin: 20px;
+            border-radius: 5px;
+            box-shadow: 2px 2px rgba(0, 0, 0, 0.525); 
+        }
+        h2 {
+            margin: 20px;
+            padding: 5px;
+        }
+        h3 {
+            margin: 20px;
+            padding: 5px;
+        }
+        p {
+            margin: 20px;
+            padding: 0;
+        }
+        pre  {
+            background-color: rgb(74, 73, 73);
+            color: white;
+            margin: 0 40px 20px 20px;
+            display: flex;
+        }
+       
+        .circulo {
+             width: 100px;
+             height:100px;
+             background-color: tomato;
+             border-radius: 50%;
+             }
+
+        .elipse {
+             width: 200px;
+             height: 100px;
+             background-color: lightgreen;
+             border-radius: 50% / 50%; /* Ou 100px / 50px para esse exemplo */
+                }   
+        footer {
+             background-color: black;
+             color: white;
+             text-align: center;
+             padding: 1px;
+        }                 
+    </style>
+</head>
+<body>
+    <header><h1>Border-Radius</h1></header>
+    <main>
+        <section>
+            <h2>O que é border-radius?</h2>
+            <p>Basicamente o border-radius define o raio da curvatura que será aplicada a cada um dos quatro cantos de um elemento. Você pode aplicar o mesmo raio a todos os cantos, ou especificar raios diferentes para cada um, criando formas mais complexas.</p>
+            
+            <h3>Sintaxe e valores:</h3>
+            
+            <p>Existem várias maneiras de aplicar o border-radius, desde a mais simples até a mais especifica:</p>
+            <ol>
+                <li><strong>Arredondamento uniforme (todos o cantos iguais)</strong></li>
+                <ul>
+                    <li><strong>Se você fornecer um único valor, ele será aplicado a todos os quatro cantos do elemento.</strong></li>
+            <pre><code>
+                HTML
+                &lt div class="caixa arredontada" &gt &lt/div&gt
+
+                CSS
+                .caixa {
+                       width: 150px;
+                       heigth: 100px;
+                       background-color: #F0F0F0;
+                       border: 2px solid #333;
+                       margin: 20px;
+                       }
+
+                .arredondada {
+                       border-radius: 15px; /* Todos os cantos com raio de 15px */
+                       }
+           </code></pre>
+                    <li><strong>Com dois valores:</strong></li>
+                    <pre><code>
+                        border-radius: valor1 valor2;
+                    </code></pre>
+                    <ul>
+                        <li>valor 1 é aplicado aos cantos superior esquerdo e inferior direito</li>
+                        <li>valor 2 é aplicado aos cantos superior direito e inferior esquerdo</li>
+                    </ul>
+                    <li><strong>Com três valores</strong></li>
+                    <pre><code>
+                        border-radius: valor1 valor2 valor3;
+                    </code></pre>
+                    <ul>
+                        <li>Valor 1 é apçicado ao canto superior esquerdo.</li>
+                        <li>Valor 2 é aplicado aos cantos superior direito e inferior esquerdo.</li>
+                        <li>Valor 3 é aplicado ao canto inferior direito.</li>
+                    </ul>
+                </ul>
+                <li><strong>Criando formas circulares ou elípticas</strong></li>
+                <p>Usar porcentagem é especialmente útil para criar círculos ou elípses:</p>
+                <ul>
+                    <li>Círculo perfeito: Para criar um círculo perfeito a partir de um elemento quadrado (com width e height iguais), defina border-radius: 50%;</li>
+                </ul>
+                <p>HTML</p>
+                <pre><code>
+                    &lt div class="circulo" &gt &lt/div&gt
+                </code></pre>
+                <p>CSS</p>
+                <pre><code>    
+                    .circulo {
+                        width: 100px;
+                        height:100px;
+                        background-color: tomato;
+                        border-radius: 50%;
+                    }
+                </code></pre>
+            </ol>
+            <div class="circulo"></div>
+                <ul>
+                    <li>Elipse: Para criar uma elipse a partir de um elemento retângular, você também pode usar 50% ou valores específicos para criar um arredondamento elíptico. Você pode usar a barra / para especificar raios horizontais e verticais independentes para cada canto, criando formas elípticas.</li>
+                </ul>
+                <pre><code>
+                border-radius: 
+                [raio-horizontal-1] [raio-horizontal-2] [raio-horizontal-3]  [raio-horizontal-4] / 
+                [raio-vertical-1] [raio-vertical-2] [raio-vertical-3]  [raio-vertical-4];
+                </code></pre>
+                <p>Ou de forma mais simples, se quiser uma elipse uniforme:</p>
+                <p>CSS</p>
+                <pre><code>
+                    .elipse {
+                    width: 200px;
+                    height: 100px;
+                    background-color: lightgreen;
+                    border-radius: 50% / 50%; /* Ou 100px / 50px para esse exemplo */
+                    }
+                </code></pre>
+            <div class="elipse"></div>
+        </section>     
+    </main>
+  <footer><p>Desenvolvido por Rodrigo Ueda</p></footer>  
+</body>
+</html>

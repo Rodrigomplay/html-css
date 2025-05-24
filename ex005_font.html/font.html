@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontes Tamanhos e Tipos</title>
+    <style>
+        body {
+            @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+            font-size: 16px;/*Tamanho da fonte*/
+        }
+        h1 {
+            font-family: "work Sans", sans-serif;
+            font-weight: bolder;
+            font-size: 2em;
+            font-style: italic;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>Trabalhando com fontes em CSS</h1>
+    <h3>Medidas absolutas:</h3>
+    <p>cm, mm, in, px, pt, pc</p>
+
+    <h3>Medidas relativas:</h3>
+   <p> em, ex, rem, vw, vh, %</p>
+   <p>A recomendação da w3scholls é que se utilize px ou em. A medida rem é utilizada no root. As medidas absolutas sáo mais utilizadas para o caso de impressáo.</p>
+
+    <h3>shorthand font:</h3>
+    <p> Em h1 se utiliza muito esse tipo de configuração:</p>
+    <pre><code>
+        h1 {
+            font-family: "work Sans", sans-serif;<strong> /*Define o tipo de letra*/</strong>
+            font-weight: bolder;<strong> /*Define a espessura (ou peso) da fonte*/</strong>
+            font-size: 3em;<strong> /*Define o tamanho da fonte*/</strong>
+            font-style: italic;<strong> /*Define o estilo da fonte (No caso italic)*/</strong>
+           }
+    </code></pre>
+    <p>Podemos utilizar o método shorthand que fica exatamente nessa ordem <strong>(font-style => font-weight => font-size=> font-family)</strong></p>
+    <!--shorthand font-->
+    <pre><code> h1 { font: italic bolder 3em 'work Sans', sans-serif;} </code></pre>
+
+    <h3>Algumas fontes externas:</h3>
+    <p>Podemos utilizar fontes importadas ou baixadas da internet.Nesse exemplo acima em style, importei uma fonte noto do google fonts.</p>
+    <ul>
+    <li><a href="https://fonts.google.com/">google fonts</a></li>
+    <li><a href="https://www.dafont.com/pt/">dafont.com</a></li>
+    </ul>
+
+    <h3>Capturando fontes de um site</h3>
+    <p>Para isso podemos instalar uma extensão em chrome web store chamada fonts ninja. Essa extensão tem a versão paga, mas podemos utilizar somente para identificar a fonte.</p>
+    <p>Como utilizar?</p>
+    <ul>
+       <li> Instalar a extensão fonts ninja em chrome web store</li>
+       <li>Abrir o site que você quer identificar a fonte</li>
+       <li>Clicar no icone da extensão fonts ninja</li>
+    </ul>
+    
+    <h3>Detectando fontes dentro de imagens</h3>
+    <p>whatfontis.com ou font finder, font squirrel, myfonts.com</p>
+
+    <h3>Alinhamento de texto</h3>
+    <ul>
+        <li>text-align:justify; Fica alinhado dos dois lados.</li>
+        <li>text-align:left; fica alinhado a esquerda</li>
+        <li>text-align: right; Fica alinhado a direita</li>
+        <li>text-align: center; Fica centralizado</li>
+        <li>text-indent: 30px; O inicio do paragrafo fica um pouco a direita.</li>
+    </ul>
+    <h3>Seletores personalizados</h3>
+    <p>Podemos selecionar se um h1,h2 fica uma a direita e outro a esquerda. Para isso precisamos identicar por classe. Exemplo &lt h2 class 1 &gt</p>
+</body>
+</html>

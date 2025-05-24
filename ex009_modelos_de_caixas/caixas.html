@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caixas</title>
+</head>
+<body>
+    <h1>Modelo de caixas</h1>
+    <p>Um conceito fundamental para organizar e estilizar o conteúdo na web! Existem dois tipo de caixas que o css utiliza para rendenizar os elementos. Caixas de nível de bloco (block-level boxes) e caixas de nível em linha (inline-level boxes)</p>
+     
+       <h2>1. Caixas de nível de bloco(Block-Level Boxes):</h2>
+        <p>Imagine essas caixas como blocos sólidos que ocupam toda a largura disponível do seu elemento pai (a não ser que você defina uma largura específica). Por padrão, os elementos de nível de bloco sempre começam em uma nova linha.</p>
+
+        <h3>Caracteristicas principais:</h3>
+        <ul>
+            <li>Ocupam toda a largura disponível: Tentam se estender para preencher a largura do seu conteiner pai.</li>
+            <li>Forçam quebra de linha: Elementos de nível de bloco antes e depois deles aparecem em linhas separadas.</li>
+           <li> Respeitam as propriedades de largura (width) e altura (height):Você pode definir explicitamente a largura e a altura dessas caixas.</li>
+           <li>Respeitam as propriedades de margem(margin) e preenchimento(padding) em todas as quatro direções (topo,inferior,direita e esquerda)</li>
+        </ul>
+
+        <h3>Exemplo de elementos HTML que geram caixas de nível de bloco por padrão:</h3>
+        <ul>
+            <li> &lt div &gt</li>
+            <li> &lt p &gt</li>
+            <li> &lt h1 &gt a &lt h6 &gt</li>
+            <li> &lt ul &gt</li>
+            <li> &lt ol &gt</li>
+            <li> &lt li &gt</li>
+            <li> &lt form &gt</li>
+            <li> &lt form &gt</li>
+            <li> &lt header &gt</li>
+            <li> &lt footer &gt</li>
+            <li> &lt section &gt</li>
+        </ul>
+
+        <h3>Exemplo em CSS:</h3>
+        <pre><code>
+            div {
+                background-color: lightblue;
+                width:50%;
+                padding:20px;
+                margin-botton:15px;
+            }
+        </code></pre>
+        <p>Neste exemplo, cada div ocupara 50% da largura do seu conteiner, terá um preenchimento interno de 20 pixels e uma margem inferior de 15 pixels, aparecendo um abaixo do outro.</p>
+
+        <h2>Caixas em nível de linha (inline-level boxes)</h2>
+        <p>Pense nessas caixas como palavras dentro de uma frase. Elas ocupam apenas o espaço necessário para exibir seu conteúdo e não forçam quebras de linhas</p>
+        <h3>Caracteristicas principais:</h3>
+        <li>Ocupam apenas a largura necessária para o conteúdo: A largura da caixa se ajusta ao conteúdo dentro dela.</li>
+        <li>Não forçam quebras de linha: Elementos de nível em linha podem aparecer lado a lado na mesma linha.</li>
+        <li>Ignoram as propriedades de largura(width) e altura (height): Tentar definir width e height em elementos inline geralmente não tem efeito ( há exceções com inline-block).</li>
+        <li>Respeitam as propriedades de margem (margin) e preenchimento(padding) apenas nas direções horizontal (esquerda e direita): As margens e o preenchimento vertical podem afetar a renderização de elementos adjacentes de maneira inesperada.</li>
+        <h3>Exemplos de elementos HTML que geram caixas de nível em linha por padrão:</h3>
+        <ul>
+            <li> &lt span &gt </li>
+            <li> &lt a &gt </li>
+            <li> &lt img &gt</li>
+            <li> &lt strong &gt</li>
+            <li> &lt em &gt </li>
+            <li> &lt br &gt</li>
+            <li> &lt input &gt </li>
+            <li> &lt select &gt </li>
+            <li> &lt textarea &gt </li>
+            <li> &lt code &gt </li>
+        </ul>
+        
+        <h3>Exemplo em CSS:</h3>
+        <pre><code>
+            span {
+                background-color: blue;
+                padding: 5px 10px;
+                margin: 0 5px;
+            }
+        </code></pre>
+        <p>Neste exemplo, cada &lt span &gt terá um fundo azul, um preenchimento de 5 pixels em cima e embaixo ,10 pixels nas laterais e uma margem de 5 pixels nas laterais, aparecendo lado a lado se houver espaço. Observe que a margem vertical pode não afetar o espaçamento vertical de outros elementos inline da mesma forma que a margem horizontal.</p>
+
+        <h2>O poder do display no CSS:</h2>
+        <p>A grande sacada é que você pode alterar o tipo de caixa de um elemento usando o display. Os valores mais comuns são:</p>
+        <ul>
+            <li>display: block; Força um elemento a sem comportar como uma caixa de nivel de bloco.</li>
+            <li>display:inline; Força um elemento a se comportar como uma caixa de nível de bloco.</li>
+            <li>display: inline-block; Uma combinação poderosa! O elemento flui como um elemento em linha (não força quebra de linha), mas respeita as propriedades de largura, altura, margem e preenchimento em todas as direções como um elemento de bloco.</li>
+            <li>display:flex e display:grid; Criam contextos de layout flexivel e de grade respectivamente, alternando a forma como os filtros diretos do elemento são dispostos.</li>
+            <li>display:none; Remove completamente o elemento do fluxo do documento (ele não ocupa nenhum espaço e não é exibido).</li>
+        </ul>
+
+        <p>Podemos utilizar a ferramenta devtools. Em elementos você pode visualizar o box padrão ou configurado por você.É possível ajustar, mas a alteração não salva, precisa copiar e colar.</p>
+
+    <ul>
+        <li>height = altura</li>
+        <li>width = largura</li>
+        <li>border = borda da caixa</li>
+        <li>padding = Espaço que distancia a borda do conteúdo</li>
+        <li>margin = parte de fora da caixa</li>
+        <li>outline = contorno da borda</li>
+    </ul>
+    
+</body>
+</html>

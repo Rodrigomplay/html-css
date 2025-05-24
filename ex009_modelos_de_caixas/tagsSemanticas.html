@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grouping Tags</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: larger;
+        }
+        header {
+            background-color: rgb(104, 104, 171);
+            color:rgb(228, 216, 216);
+            padding:10px
+        }
+        nav {
+            background-color: rgb(65, 63, 63);
+        }
+        nav > a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            margin-left: 30px;
+            margin-right: 30px
+        }
+        ul {
+            display:none
+        }
+        nav > a:hover {
+            text-decoration: underline;
+        }
+        pre {
+            background-color: rgb(213, 208, 208);
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 18px;
+            display: flex;
+        }
+        footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 1px;
+        }
+    </style>
+</head>
+<body>
+    <!--Cabeçalho-->
+    <header>
+        <!--Título-->
+        <h1>Tags Semânticas</h1> 
+        
+        <nav>
+            <a href="https://www.google.com">google</a>
+            <ul>
+                <li><a href="#"></a>item 1</li>
+                <li><a href="#"></a>item 2</li>
+                <li><a href="#"></a>item 3</li>
+            </ul>
+            <a href="https://www.google.com">google</a>
+            <a href="https://www.google.com">google</a>
+            <a href="https://www.google.com">google</a>
+        </nav>
+    </header>
+    <main>
+        <p>O HTML5 introduziu tags semânticas que ajudam a descrever o conteúdo de uma página de forma mais clara e significativa. Isso ajuda nos mecanismos de buscas. No exemplo abaixo, temos um exemplo de como uma página pode ficar mais organizada.</p>
+        <section>
+        <pre><code>
+            &lt body &gt
+                   &lt header &gt
+                       &lt h1 &gt Minha página &lt/ h1 &gt
+                           &lt nav &gt
+                               &lt a href="#" &gt Link &lt/ a &gt
+                               &lt a href="#" &gt Link &lt/ a &gt
+                               &lt a href="#" &gt Link &lt/ a &gt
+                               &lt a href="#" &gt Link &lt/ a &gt
+                           &lt/ nav &gt        
+                   &lt/ header &gt
+                   &lt main &gt
+                       &lt section id="noticias" &gt
+                          &lt article &gt
+                              &lt h2 &gt Noticias do Brasil &lt/ h2 &gt
+                              &lt p &gt Se os politicos e os eleitores de estimação não atrapalha-se, o Brasil teria futuro &lt/ p &gt
+                              &lt aside &gt
+                                  &lt p &gt Artigo escrito por Rodrigo Ueda &lt/ p &gt
+                          &lt/ article &gt
+                      &lt/ section &gt
+                   &lt/ main &gt
+                   &lt footer &gt
+                       &lt p &gt Desenvolvido por Rodrigo Ueda &lt/ p &gt
+            &lt/ body &gt                                
+        </code></pre>
+        </section>
+    </main>
+    <footer>
+        <p>Desenvolvido por Rodrigo Ueda</p>
+    </footer>
+
+    
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Container e class</title>
+    <style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-align: justify;
+        background-color: rgba(52, 90, 130, 0.8);
+        color: #343a40;
+        line-height: 1.6;
+        margin: 20px;
+    }
+    .container {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #dfc791b8;
+        border-radius: 8px;
+        box-shadow: 0 0 10px; 
+    }
+    
+    h1 {
+        border-bottom: 2px solid #dee2e6; /* Linha sutil abaixo do título principal */
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+    }
+    pre {
+        background-color: #f7e8dcc9; /* Cinza ainda mais claro para a caixa de código */
+        border: 1px solid #ced4da; /* Borda cinza clara e suave */
+        padding: 15px; /* Aumenta um pouco o espaçamento interno */
+        border-radius: 8px; /* Bordas mais arredondadas */
+        overflow: auto;
+        font-size: 0.9em;
+        line-height: 1.5; /* Ligeiramente diferente para a caixa de código */
+        margin-bottom: 15px; /* Adiciona um pouco de espaço abaixo da caixa de código */
+    }
+     code {
+     font-family: 'Consolas', 'Courier New', monospace; /* Fonte monoespaçada comum para código */
+     display: block;
+     white-space: pre;
+     color: #274c77; /* Uma cor para destacar o código */
+    }
+
+    ul {
+     list-style-type: disc; /* Estilo padrão para a lista */
+     padding-left: 20px;
+     margin-bottom: 10px;
+    }
+
+    dd {
+     color: #021527; /* Um tom de cinza mais claro para as observações */
+     font-size: 0.9em;
+     margin-left: 20px;
+     margin-bottom: 5px;
+    }
+
+   hr {
+     border: 0;
+     border-top: 1px solid #dee2e6; /* Linha horizontal sutil */
+     margin: 20px 0;
+    }
+
+    section {
+     margin-bottom: 25px; /* Mais espaço entre as seções */
+ }
+   </style>  
+</head>
+<body>
+    <div class="container">
+    <h1>Container e class</h1>
+    <h2>Container</h2>
+    <p>O termo container em html não se refere a uma tag especifica com esse nome (embora possamos usar &ltdiv&gt ou &ltsection&gt como containers).</p>
+    <p>Ele se refere a idéia de agrupar elementos HTML relacionados dentro de um elemento pai. Esse agrupamento serve para dois propósitos principais:</p>
+    <ol>
+        <li>Organização estrutural: Tornar o cõdigo HTML mais semântico e fácil de entender, dividindo o conteúdo em seções lógicas.  Por exemplo, você pode ter um container para:          
+            <ul>
+             <li>Cabeçalho(&ltheader&gt)</li>
+            <li>Navegação(&ltnav&gt)</li>
+            <li>Conteúdo principal(&ltmain&gt)</li>
+            <li>Barra lateral (&ltaside&gt)</li>
+            <li>Rodapé (&ltfooter&gt)</li>
+            </ul>
+            <p>Você pode ter outros containers(&ltsection&gt) ou (&ltdiv&gt) para agrupar artigos,formulários,etc.</p>
+        <li>Estilização com CSS: Facilitar a aplicação de estilos a um grupo de elementos de uma vez. Ao envolver um conjunto de elementos em um container,</li>    
+    </ol>
+    <h2>Tags HTML comumente usadas como containers:</h2>
+    <ul>
+        <li>&ltdiv&gt(Divisão): É um container genérico, sem nenum significado semântico inerente. É usado puramente para agrupar outros elementos para fins de estilo ou script. </li>
+        
+          <section>
+             <pre><code>
+                &ltdiv class="container-principal"&gt
+                    &lth1&gtTítulo da seção&lt/h1&gt
+                    &ltp&gtConteúdo da seção&lt/p&gt
+                        &ltul&gt
+                          &ltli&gtItem&lt/li&gt
+                          &ltli&gtItem&lt/li&gt
+                        &lt/ul&gt
+                &lt/div&gt
+             </code></pre>
+          </section>
+        <li>&ltsection&gt(Seção): Representa uma seção temática de conteúdo relacionado em um documento.É mais semântico que &ltdiv&gt e ajuda a definir a estrutura do documento.</li>
+        <section>
+            <pre><code>
+            &ltsection id="sobre-nos"&gt
+                &lth2&gtSobre nós&lt/h2&gt
+                &ltp&gtInformações sobre a nossa empresa...&lt/p&gt
+            &lt/section&gt 
+            </code></pre>   
+        </section>
+        <li>&ltarticle&gt(Artigo): Representa uma composição autocontida em um documento, página, aplicativo ou site.Pode ser um post de blog, um artigo de jornal, etc.</li>
+        <section>
+            <pre><code>
+                &ltarticle&gt
+                    &lth3&gtTítulo do artigo&lt/h3&gt
+                    &ltp&gtConteúdo do artigo...&ltp&gt
+                &lt/article&gt
+            </code></pre>
+        </section>
+        <li>&ltheader&gt(Cabeçalho): Geralmente contém informações introdutórias ou um conjunto de links de navegação.</li>
+        <li>&ltnav&gt(Navegação): Usado para agrupar links de navegação</li>
+        <li>&ltaside&gt(Conteúdo lateral): Representa conteúdo relacionado ao conteúdo principal, mas que pode ser considerado separado(como uma barra lateral).</li>
+        <li>&ltfooter&gt(Rodapé): Geralmente contém informações sobre o autor,direitos autorais, links para documentos relacionados, etc.</li>
+        </ul>
+    </div>
+</body>
+</html>

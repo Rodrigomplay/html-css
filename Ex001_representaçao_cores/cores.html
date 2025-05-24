@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cores CSS</title>
+</head>
+<body>
+    <h1>Representação por nome</h1>
+    <h2 style="background-color: blue;color: white">Exemplo de cores por nome</h2>
+    <p>Representação da cor por nome:</p>
+    <p><code>&lth2 style="background-color:blue; color: white"&gt Exemplo de cores por nome &lt/h2&gt</code></p>
+    
+
+    <h1>Representação por códigos hexadecimais</h1>
+    <h2 style="background-color: #0000ff;color:#ffffff">Exemplo de cores em hexadecimal</h2>
+    <p>Representação das cores em Hexadecimal</p>
+    <p><code>&lth2 style="background-color:#0000FF; color #FFFFFF"&gtExemplo de cores em hexadecimal &lt/h2&gt</code></p>
+    
+    <p>Decimal: 0 1 2 3 4 5 6 7 8 9 =>10</p>
+    <p>Hexadecimal 0 1 2 3 4 5 6 7 8 9 A B C D E =>16</p>
+    <p>Note que as cores do primeiro &lth2&gt está igual ao segundo. O primeiro é representado por nome e o segundo em hexadecimal.<br>
+    A ordem de valencia do código Hexadecimal seria por ordem crescente, onde o zero não representa nada e o F é o mais representativo.<br>
+    As cores em hexadecimal é representado desta forma:
+        <ol>
+            <li>Vermelho representa os dois primeiros digitos</li>
+            <li>Verde representa os dois segundos digitos</li>
+            <li>Azul representa os dois ultimos dígitos</li>
+        </ol>
+        <ol><strong>00</strong>00FF
+            <li><strong>00</strong>= vermelho</li>
+            <li>00 = verde</li>
+            <li>FF = Azul</li>
+        </ol>
+    </p>
+    
+    <h1>Representação de cores em rgb (Red, green, blue)</h1>
+    <h2 style="background-color: rgb(0,0,255);color:rgb(255,255,255)">Exemplo de cores rgb</h2>
+    <p></p>
+    <p>Representação das cores em rgb</p>
+    <p><code>&lth2 style="background color:rgb( 0, 0, 255 );color:rgb( 255, 255, 255 )"&gt  Exemplo de cores rgb &lt/h2&gt</code></p>
+    <p>Assim como as cores em hexadecimal, em rgb também é representado por vermelho, verde e azul onde 0 é o mínimo e 255 o máximo</p>
+
+    <h1>Caracteristica das cores por tipo HSL (Hue, Saturation, Luminosity)</h1>
+    <h2 style="background-color: hsl(240,100%,50%);color:hsl(0,0%,100%);">Caracteristica das cores:</h2>
+    <p><code>&lth2 style="background-color: hsl(240,100%,50%);color:hsl(0,0%,100%)"&gt Tipos de cores:&lt/h2&gt</code></p>
+    <ol>Caracteristica das cores:hsl
+        <li>Hue => Matiz representado pelo h</li>
+        <li>Saturation => Saturação representado pelo s</li>
+        <li>Luminosity => Luminosidade representado pelo l</li>
+    </ol>
+    <p>Note que as quatro formas tem exatamente as mesmas cores, representado por técnicas diferentes</p>
+
+    <h1>Transparencia</h1>
+    <h2 style="background-color:rgba(5, 93, 61, 0.595);color: white;">Como colocar transparencia nas cores:</h2>
+    <p>O visual studio facilita. Ao digitar a cor, vai abria a caixa seletora de cores e por la podemos aumentar ou diminuir a tranparência pela barra de rolagem do meio</p>
+    <p>Pelo setup de cores na aba de cima podemos visualizar o código em hexadecimal, rbg, e hsl. Basta clicar em cima para modificar.</p>
+    <p>No item estilizado note que o rgb virou rgba que significa red, green, blue e alpha da transparência. Em hsl vira hsla.</p>
+
+</body>
+</html>

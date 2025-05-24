@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cite e blockquote</title>
+    <style>
+        h1 {
+            text-align: center;
+            background-color: blue;
+        }
+        p {
+            text-align: justify;
+        }
+       
+    </style>
+</head>
+<body>
+ <h1>Tag cite e blockquote</h1>
+ <h2>Entendendo a tag &lt cite &gt</h2>
+     <p>A tag &ltcite&gt é usada para marcar a fonte de uma citação. Pense nela como uma forma de  dar crédito à origem do texto que você está citando dentro do seu HTML.</p>
+     <p>Para que ela serve, em resumo:</p>
+     <p>Indicar a fonte: Ela informa aos navegadores e outras ferramentas que o conteúdo dentro dela é o título de um trabalho (como um livro, artigo, música, filme, etc.) que foi citado no texto principal.</p>
+     <p>Semântica: Ela adiciona significado semântico ao seu documento HTML, tornando-o mais compreensível para mecanismos de busca, leitores de tela e outros agentes de usuário. Isso ajuda a entender a estrutura e o contexto do seu conteúdo.</p>
+     <p>Estilização padrão (geralmente): Por padrão, muitos navegadores renderizam o texto dentro da tag &lt cite &gt em itálico. No entanto, essa estilização pode ser alterada com CSS.</p>
+     <hr>
+     <p>Como ela é usada:</p>
+     <p>A tag &ltcite&gt é geralmente usada dentro de um elemento de citação, como &ltblockquote&gt (para citações mais longas) ou &ltq&gt (para citações curtas em linha).</p>
+     <hr>
+     <p>Exemplo:</p>
+     <p>1. Usando com &ltblockquote&gt:</p>
+     <p>Como disse Albert Einstein</p>
+     <blockquote>
+        <p>A imaginação é mais importante que o conhecimento. O conhecimento é limitado, 
+        enquanto a imaginação abraça o mundo inteiro,estimulando o progresso, dando luz
+        a evolução.</p>
+        <cite>Albert Einstein</cite>
+     </blockquote>
+     <p>Neste exemplo,&lt cite &gt Albert Einsten &lt/cite&gt indica que a citação acima é de Albert Einsten</p>
+     <hr>
+     <p>Exemplo:</p>
+     <p>2.Usando com &ltq&gt :</p>
+     <p>O famoso ditado <q>Penso, logo existo</q> é de <cite>René Descartes</cite></p>
+     <hr>
+
+ <h2>Entendendo a tag blockquote </h2>
+     <p>A tag &ltblockquote&gt em HTML serve para indicar uma seção de texto que é citada de outra fonte. Pense nela como uma forma de destacar um trecho de conteúdo que não é original do seu documento, mas sim retirado de algum outro lugar.</p>
+
+    <p>Para que ela serve, em resumo:</p>
+     <ul>
+<li>Indicar citação longa: Ela sinaliza para os navegadores e outros agentes de usuário que o conteúdo dentro dela é uma citação extensa de outra fonte.
+<li>Semântica: Assim como a tag &ltcite&gt, ela adiciona significado semântico ao seu HTML, deixando claro qual parte do texto é uma citação. Isso melhora a acessibilidade e a interpretação do conteúdo por máquinas e pessoas.
+<li>Estilização padrão (geralmente): Por padrão, muitos navegadores renderizam o conteúdo dentro de &ltblockquote&gt com uma margem à esquerda (e às vezes à direita), criando um recuo visual para diferenciá-lo do texto principal. Essa estilização padrão pode ser modificada com CSS.
+    </ul>
+<p>Como ela é usada:</p>
+<p>A tag &ltblockquote&gt envolve o texto que você está citando. Geralmente, dentro dela, você terá um ou mais elementos &ltp&gt (parágrafos) contendo a citação. É comum também usar a tag &ltcite&gt dentro ou fora de &ltblockquote&gt para indicar a fonte da citação.</p>
+<hr>
+<p>Exemplos:</p>
+<p>Em seu famoso livro, "O Pequeno Príncipe", Antoine de Saint-Exupéry escreveu:</p>
+<blockquote>
+  <p>Tu te tornas eternamente responsável por aquilo que cativas.</p>
+  <cite>O Pequeno Príncipe, Antoine de Saint-Exupéry</cite>
+</blockquote>
+<hr>
+<p>Como observou o renomado cientista:</p>
+<blockquote>
+  <p>A ciência sem religião é manca, a religião sem ciência é cega.</p>
+  <cite>Albert Einstein</cite>
+</blockquote>
+</body>
+</html>

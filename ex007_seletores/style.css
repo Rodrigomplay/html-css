@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+/* em HTML é id => em CSS é # */
+/* em HTML é class => em CSS é . */
+/* podemos declarar igual ao exemplo abaixo => h1#principal {} ou somente #principal */
+
+body {
+    background-color: lightyellow;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: justify;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+h1#principal {
+    text-align: center;
+    background-color: rgba(104, 39, 39, 0.831);
+    width: 700px;
+    color: rgb(233, 233, 48);
+}
+
+h2 {
+    font-size: 2em;
+}
