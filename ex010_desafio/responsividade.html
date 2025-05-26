@@ -5,57 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsividade</title>
     <link rel="shortcut icon" href="estilo/digo.ico" type="image/x-icon">
-
-    <style>
-        body {
-            background-color: gray;
-        }
-
-        main {
-            background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            min-width: 280px;
-            max-width: 800px;
-            margin: auto;
-            box-shadow: 5px;
-        }
-
-        img {
-            width: 100%;
-            border-radius: 10px;
-        }
-    </style>
-    
+    <link rel="stylesheet" href="estilo/styleResp.css">  
 </head>
 <body>
     <header>
         <h1>Site Responsivo</h1>
+        <p>Site responsivo se adapta e oferece uma ótima experiência de visualização em uma variedade de dispositivos.</p>
+    
     </header>
     <nav>
-        <a href="#">Media Queries CSS</a>
-        <a href="#">Layouts Fluidos/Grid</a>
-        <a href="#">Imagens Flexíveis:</a>
-        <a href="#">Mobile First:</a>
-        <a href="#">SEO</a>
+        <a href="#">Media Queries</a>
+        <a href="#">Grid/Layouts Fluídos</a>
+        <a href="#">Imagens Flexíveis</a>
+        <a href="#">Mobile First</a>
     </nav>
     <main>
-        <section>
-            <h3>Testando Responsividade:</h3>
-            <picture>
-                <source media="(max-width: 600px)" srcset="imagens/irina-blok-pq.jpg">
-                <img src="imagens/irina-blok.jpg" alt="Irina Blok">
-            </picture>       
-        </section>
-
-        <article>
-            <p>Um site responsivo é um site que se adapta e oferece uma ótima experiência de visualização em uma variedade de dispositivos, desde desktops e laptops até tablets e smartphones. Isso significa que o layout, as imagens e o texto se ajustam automaticamente ao tamanho da tela do usuário, garantindo que o conteúdo seja sempre fácil de ler e navegar, sem a necessidade de rolagem horizontal ou de zoom excessivo.</p>
-            
+        <article>  
             <h2>Por que ter um site responsivo é essencial?</h2>
-            
-            <p>Ter um site responsivo não é mais um diferencial, mas sim uma necessidade. Aqui estão os principais motivos:</p>
-            
-            <h3>Experiência do Usuário (UX) Aprimorada:</h3>
+        
+            <p>Ter um site responsivo na era digital é essencial porque garante que sua página web se adapte e funcione perfeitamente em qualquer dispositivo, seja um computador desktop, tablet ou smartphone. Com o crescente número de pessoas acesssando a internet por meio de celulares, ter um site responsivo deixou de ser um diferencial para se tornar uma necessidade.</p>
+
+                <h3>Experiência do Usuário (UX) Aprimorada:</h3>
                 <ul>
                 <li>Um site que se adapta bem a qualquer tela proporciona uma navegação mais agradável, aumentando o tempo de permanência do usuário e diminuindo a taxa de rejeição.</li>
                 <li>Melhora no SEO (Otimização para Mecanismos de Busca): O Google e outros motores de busca priorizam sites responsivos em seus resultados de pesquisa, especialmente em buscas feitas em dispositivos móveis. Um site não responsivo pode ter sua classificação prejudicada.</li>
@@ -64,22 +34,23 @@
                 <li>Credibilidade e Profissionalismo: Um site que funciona perfeitamente em qualquer dispositivo transmite uma imagem mais moderna e profissional para sua marca ou negócio.</li>
                 </ul>
             
-            <h3>Como um site responsivo funciona?</h3>
-            
-            <p>O desenvolvimento de um site responsivo geralmente envolve técnicas como:</p>
-            
+            <h3>Técnicas aplicadas para o desenvolvimento de um site responsivo:</h3>  
             <ul>
-                <li>Media Queries CSS: São regras CSS que permitem aplicar estilos diferentes com base nas características do dispositivo, como largura da tela, altura e orientação.</li>
+                <li><strong>Media Queries CSS:</strong> São regras CSS que permitem aplicar estilos diferentes com base nas características do dispositivo, como largura da tela, altura e orientação.</li>
                 <li>Layouts Fluidos/Grid: O uso de unidades relativas (como porcentagens) em vez de pixels fixos para larguras e alturas, permitindo que os elementos se redimensionem proporcionalmente.</li>
-                <li>Imagens Flexíveis: Imagens que se ajustam ao tamanho do contêiner onde estão inseridas, evitando que estourem o layout.</li>
-                <li>Mobile First: Uma abordagem de design que começa com o desenvolvimento para telas menores e depois se expande para telas maiores, garantindo que a experiência principal seja otimizada para dispositivos móveis.</li>
-                </ul>
-
+                <li><strong>Imagens Flexíveis:</strong> Imagens que se ajustam ao tamanho do contêiner onde estão inseridas, evitando que estourem o layout.</li>
+                <li><strong>Mobile First:</strong> Uma abordagem de design que começa com o desenvolvimento para telas menores e depois se expande para telas maiores, garantindo que a experiência principal seja otimizada para dispositivos móveis.</li>
+            </ul>
+            
             <h3>Quer verificar se o seu site é responsivo ou precisa de um?</h3>
+            <picture>
+                <source media="(max-width: 670px)" srcset="imagens/imagem-pq.jpg">
+                <img src="imagens/imagem-gd.jpg" alt="imagem tecnológica">
+            </picture>
             
             <p>Se você já tem um site, pode testar sua responsividade redimensionando a janela do navegador no seu computador ou acessando-o em diferentes dispositivos móveis. Se notar que o conteúdo não se ajusta bem, está difícil de ler ou navegar, seu site provavelmente precisa de melhorias.</p>
             
-            <h1>Entendendo os Pilares da Responsividade com HTML e CSS</h1>
+            <h1>Entendendo os Pilares da Responsividade </h1>
 
             <h2>HTML: A Estrutura Semântica é a Base</h2>
             
@@ -87,20 +58,20 @@
 
             <h3>Meta Tag Viewport:</h3> 
             <p>Essa é a primeira linha de defesa da responsividade no HTML. Adicione a seguinte linha dentro da tag &lt head &gt do seu documento HTML:</p>
+           
 
-            <h4>HTML</h4>
-            
-            <pre><code>
-             &ltmeta name="viewport" content="width=device-width, initial-scale=1.0"&gt 
-            </code></pre>
-            
-                <ul>
-                    <li>width=device-width: Diz ao navegador para que a largura da página seja igual à largura do dispositivo.</li>
-                    <li>initial-scale=1.0: Define o nível de zoom inicial quando a página é carregada. Sem essa meta tag, o navegador pode tentar renderizar sua página como se fosse em um desktop, e aí a responsividade não funciona direito.</li>
-                </ul>
+            <div>
+                <h4>HTML</h4>
+                <pre><code>
+                    &ltmeta name="viewport" content="width=device-width, initial-scale=1.0"&gt
+                </code></pre>
+                    <ul>
+                        <li>width=device-width: Diz ao navegador para que a largura da página seja igual à largura do dispositivo.</li>
+                        <li>initial-scale=1.0: Define o nível de zoom inicial quando a página é carregada. Sem essa meta tag, o navegador pode tentar renderizar sua página como se fosse em um desktop, e aí a responsividade não funciona direito.</li>
+                    </ul>
+            </div>
 
             <h2>CSS: A Magia da Adaptação</h2>
-            
             <p><strong>Unidades Relativas:</strong> Esqueça (quase) o uso de px para larguras e alturas. Prefira unidades relativas para que os elementos se ajustem ao tamanho da tela. As mais comuns são:</p>
             
             <ul> 
@@ -111,54 +82,60 @@
                 <li>vh (viewport height): Relativo à altura da viewport (1vh = 1% da altura da viewport).</li>
             </ul>
                 <p>Imagens Fluidas: Para que suas imagens não "quebrem" o layout, adicione essa regra básica ao seu CSS:</p>
-            
-            <h4>CSS</h4>
-            <pre><code>
-            img {
-             max-width: 100%; /* Garante que a imagem nunca ultrapasse a largura do seu contêiner */
-             height: auto;    /* Mantém a proporção da imagem */
-             display: block; /* Remove o espaço extra abaixo da imagem se ela for um elemento inline */
-            }
-            </code></pre>    
+
+            <div>
+                <h4>CSS</h4>
+                <pre><code>
+                img {
+                    max-width: 100%; /* Garante que a imagem nunca
+                    ultrapasse a largura do seu contêiner */
+                    height: auto;    /* Mantém a proporção da imagem */
+                    display: block; /* Remove o espaço extra abaixo da
+                    imagem se ela for um elemento inline */
+                }
+                </code></pre>
+            </div>
 
             <h2>Media Queries:</h2>
             <p>Essa é a ferramenta mais poderosa do CSS para responsividade. Elas permitem que você aplique estilos CSS diferentes com base em características específicas do dispositivo, como largura da tela, altura, orientação (retrato/paisagem) e resolução. Exemplo básico de Media Query:</p>
 
-            <h4>CSS</h4>
-            <pre><code>    
-            /* Estilos padrão para telas maiores (desktop) */
-            body {
-                font-size: 18px;
-            }
-        
-            /* Estilos aplicados quando a largura da tela for no máximo 768px (tablets e smartphones) */
-            @media screen and (max-width: 768px) {
+            <div>
+                <h4>CSS</h4>
+                <pre><code>
+                /* Estilos padrão para telas maiores (desktop) */
                 body {
-                    font-size: 16px;
+                    font-size: 18px;
                 }
-                .container {
-                    flex-direction: column; /* Exemplo: mudar o layout de linha para coluna */
+                /* Estilos aplicados quando a largura da tela for no
+                máximo 768px (tablets e smartphones) */
+                @media screen and (max-width: 768px) {
+                    body {
+                        font-size: 16px;
+                    }
+                    .container {
+                        flex-direction: column; /* Exemplo: mudar o layout
+                        de linha para coluna */
+                    }
                 }
-            }
-        
-            /* Estilos aplicados quando a largura da tela for no máximo 480px (smartphones menores) */
-            @media screen and (max-width: 480px) {
-                body {
-                    font-size: 14px;
+                /* Estilos aplicados quando a largura da tela for no máximo
+                    480px (smartphones menores) */
+                @media screen and (max-width: 480px) {
+                    body {
+                        font-size: 14px;
+                    }
+                    h1 {
+                        font-size: 24px;
+                    }
                 }
-                h1 {
-                    font-size: 24px;
-                }
-            }
-            </code></pre>
+                </code></pre>
+            </div>
 
-            <p>A ideia é que você defina "pontos de interrupção" (breakpoints) onde o layout do seu site precisa se ajustar.</p>
-            
+            <p>A ideia é que você defina "pontos de interrupção" (breakpoints) onde o layout do seu site precisa se ajustar.</p> 
+
             <h3>Flexbox e CSS Grid:</h3>
             <p> Essas duas propriedades do CSS são ferramentas poderosas para criar layouts complexos e responsivos com muito mais facilidade do que as técnicas antigas (como floats).</p>
             <ul>
                 <li>Flexbox: Ótimo para layout de componentes em uma única dimensão (linha ou coluna). Perfeito para navegação, formulários, galerias de fotos simples.</li>
-
                 <li>CSS Grid: Ideal para layouts bidimensionais, onde você precisa controlar linhas e colunas ao mesmo tempo. Perfeito para o layout geral da página.</li>
             </ul>
 
@@ -170,12 +147,12 @@
                 <li>Comece projetando e codificando para dispositivos móveis (telas pequenas).</li>
                 <li>Depois, use as Media Queries para adicionar estilos que se aplicam a telas maiores.</li>
             </ol>
-
+          
             <p>Isso garante que a experiência principal do seu site seja otimizada para o maior número de usuários (já que muitos acessam a internet pelo celular) e que você construa o layout de forma incremental, adicionando complexidade conforme o espaço permite.</p>
 
             <p>A responsividade pode parecer um pouco complexa no início, mas com a prática e o uso dessas ferramentas (Media Queries, unidades relativas, Flexbox/Grid), você pegará o jeito rapidinho.</p>
-        </article>
-        </main>
+            </article>
+    </main>
     <footer> <p>Desenvolvido por Rodrigo Ueda</p> </footer>
 </body>
 </html>
